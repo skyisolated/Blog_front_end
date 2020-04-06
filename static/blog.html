@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!-- 移动端访问时页面自适应 -->
+    <meta name="viewport" content="width=device-with, initial-scale=1.0">
+    <title>博客详情</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css">
+</head>
+<body>
+<!--导航栏-->
+    <nav class="ui inverted attached segment m-padded-tb-mini">
+        <div class="ui container">
+            <div class="ui inverted menu secondary stackable">
+                <h2 class="ui teal header item">Blog</h2>
+                <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>首页</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="clone icon"></i>归档</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="info icon"></i> 关于我</a>
+                <div class="right m-item item m-mobile-hide">
+                    <div class="ui input icon transparent">
+                        <input type="text" placeholder="Search...">
+                        <i class="inverted search icon link"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" id="mb_btn" class="ui icon button black m-right-top m-mobile-show">
+            <i class="icon sidebar"></i>
+        </a>
+    </nav>
+<!--中间部分-->
+    <div class="m-padded-tb-large m-container-small">
+        <div class="ui container">
+          <div class="ui segment top attached">
+              <div class="ui link list horizontal">
+                    <div class="item">
+                        <img src="images/weChat.jpg" alt="" class="ui avatar image">
+                        <div class="content"><a href="#" class="header">月影残光</a></div>
+                    </div>
+                    <div class="item">
+                        <i class="icon calendar"></i>2020-04-05
+                    </div>
+                    <div class="item">
+                        <i class="icon eye"></i>1111
+                    </div>
+
+              </div>
+          </div>
+          <div class="ui segment attached">
+              <img src="images/2.jpg" class="ui rounded image fluid">
+          </div>
+          <div class="ui segment attached">
+              <div class="ui segment basic right aligned">
+                  <div class="ui label orange basic">原创</div>
+              </div>
+              <h3 class="ui header center aligned">嘉神川克罗艾</h3>
+              <br>
+              <div id="content" class="m-padded-lr m-padded-tb-large">
+                  澄空学园3年级学生。
+                  担任学生会长，学生们的憧憬的目标。
+                  作为学生会长，工作十分认真，十分擅长交涉，后夜祭和经费就是由克罗艾与志雄到商店街一家一家筹集的。
+                  在女生中人气特别出众，也有不少学生感觉她难以接近。
+                  日法的混血儿，母亲是法国人，但并不擅长法语。
+                  本质上说是一位激情家，不过那样的本质被她克制着。
+                  平时十分直率，但有着孩子气和要强的一面，说话总是充满着自信。
+                  志雄很憧憬她。
+                  家里世世代代经营着食品制造加工公司『嘉神川食品株式会社』。
+                  也就是说，克罗艾是社长家的大小姐。
+                  但是，虽然外表高傲，处事干净利落，其实都是因为孤独，自认不被人需要，而为了引起他人的注意而特意努力的。其实内心十分脆弱，对母亲的离去十分在意，而在父亲病倒后彻底崩溃了，在一个雨夜冒雨来到了志雄的家里，得到了所谓的“志雄的照顾”。之后就和志雄幸福的在一起生活了。
+                  另外说一下，克罗艾挑食是因为这些食物是以前她母亲最拿手的食物，但一天克罗艾的母亲将这些菜做好并放在桌上后，就一去不回。想到这些食物自然就想起童年时的不幸，这才导致克罗艾对这些食物十分反感。
+              </div>
+              <div class="m-padded-lr">
+                  <div class="ui basic teal label left pointing ">方法论</div>
+              </div>
+
+              <div class="ui segment center aligned basic">
+                  <button id="pay_btn" class="ui button circular basic orange">打赏</button>
+              </div>
+<!--           设置弹出效果必须的样式-->
+              <div id="pay_part" class="ui flowing popup transition hidden">
+                  <div class="ui label orange basic">
+                      <div class="ui images" style="font-size: inherit">
+                          <div class="image">
+                              <img src="images/rem.jpg" width="120px" alt="" class="ui image rounded bordered">
+                              <div>rem</div>
+                          </div>
+                          <div class="image">
+                              <img src="images/rum.jpg" width="120px" alt="" class="ui image rounded bordered">
+                              <div>rum</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+          <div class="ui message positive attached">
+              <div class="ui grid middle aligned">
+                  <div class="eleven wide column">
+                        <div class="list">
+                            <li>博客信息</li>
+                            <li>博客信息</li>
+                            <li>博客信息</li>
+                            <li>博客信息</li>
+                        </div>
+                  </div>
+                  <div class="five wide column">
+                      <img src="images/weChat.jpg" style="width: 110px" alt="" class="ui image bordered rounded floated right">
+                  </div>
+              </div>
+          </div>
+          <div class="ui attached segment bottom">
+              评论
+          </div>
+        </div>
+    </div>
+<!--网页底部-->
+    <footer class="ui inverted segment vertical m-padded-tb-massive">
+        <div class="ui container center aligned">
+            <div class="ui grid divided inverted stackable">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="images/weChat.jpg" alt="" class="ui rounded image" style="width: 110px">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-spaced m-text-thin">Blog</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">用户故事（User Story）</a>
+                        <a href="#" class="item">用户故事（User Story）</a>
+                        <a href="#" class="item">用户故事（User Story）</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-spaced m-text-thin">联系我</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Email: skyisolated@qq.com</a>
+                        <a href="#" class="item">qq: 1694012933</a>
+
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header m-text-spaced m-text-thin">月影残光</h4>
+                    <p class="m-opacity-mini m-text-spaced m-text-thin">
+                        这是我的个人博客，会分享有关个人的兴趣爱好，希望可以给他人带来欢乐！
+                    </p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-opacity-mini m-text-spaced m-text-thin">
+                Copyright © 2019-2020 月影残光 练习中....
+            </p>
+        </div>
+    </footer>
+
+<!--js放在此处加载速度最快-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script>
+    $("#mb_btn").click(function () {
+        $(".m-item").toggleClass("m-mobile-hide");
+    });
+    //点击弹出图片
+    $("#pay_btn").popup({
+        popup: $("#pay_part"),
+        on: 'click',
+        position: "bottom center"
+    });
+</script>
+</body>
+</html>
