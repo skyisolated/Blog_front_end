@@ -22,6 +22,9 @@ body{
 .m-padded-mini{
     padding: 0.2em !important;
 }
+.m-padded{
+    padding: 1em !important;
+}
 .m-padded-tiny{
     padding: 0.3em !important;
 }
@@ -107,6 +110,19 @@ body{
     top: 15px;
     right:15px;
 }
+.m-fixed {
+    position: fixed !important;
+}
+.m-bottom-right {
+    bottom: 0 !important;
+    right: 0 !important;
+    z-index: 10 !important;
+}
+
+
+
+
+/*-------mobile--------*/
 .m-mobile-show {
     display: none !important;
 }
@@ -139,5 +155,5 @@ body{
 
 /*-----------shadow------------*/
 .m-shadow {
-    box-shadow: 10px 10px 5px #888888 !important;
+    box-shadow: 2px 2px 2px #888888 !important;
 }
