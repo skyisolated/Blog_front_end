@@ -10,7 +10,7 @@
 </head>
 <body>
 <!--导航栏-->
-    <nav class="ui inverted attached segment m-padded-tb-mini">
+    <nav class="ui inverted attached segment m-padded-tb-mini m-shadow">
         <div class="ui container">
             <div class="ui inverted menu secondary stackable">
                 <h2 class="ui teal header item">Blog</h2>
@@ -58,7 +58,7 @@
               </div>
               <h3 class="ui header center aligned">嘉神川克罗艾</h3>
               <br>
-              <div id="content" class="m-padded-lr m-padded-tb-large">
+              <div id="content" class="m-padded-lr-responsive m-padded-tb-large">
                   澄空学园3年级学生。
                   担任学生会长，学生们的憧憬的目标。
                   作为学生会长，工作十分认真，十分擅长交涉，后夜祭和经费就是由克罗艾与志雄到商店街一家一家筹集的。
@@ -72,7 +72,7 @@
                   但是，虽然外表高傲，处事干净利落，其实都是因为孤独，自认不被人需要，而为了引起他人的注意而特意努力的。其实内心十分脆弱，对母亲的离去十分在意，而在父亲病倒后彻底崩溃了，在一个雨夜冒雨来到了志雄的家里，得到了所谓的“志雄的照顾”。之后就和志雄幸福的在一起生活了。
                   另外说一下，克罗艾挑食是因为这些食物是以前她母亲最拿手的食物，但一天克罗艾的母亲将这些菜做好并放在桌上后，就一去不回。想到这些食物自然就想起童年时的不幸，这才导致克罗艾对这些食物十分反感。
               </div>
-              <div class="m-padded-lr">
+              <div class="m-padded-lr-responsive">
                   <div class="ui basic teal label left pointing ">方法论</div>
               </div>
 
@@ -112,7 +112,113 @@
               </div>
           </div>
           <div class="ui attached segment bottom">
-              评论
+<!--              留言列表-->
+              <div class="ui segment teal">
+                  <div class="ui comments">
+                      <h3 class="ui dividing header">Comments</h3>
+                      <div class="comment">
+                          <a class="avatar">
+                              <img src="images/weChat.jpg">
+                          </a>
+                          <div class="content">
+                              <a class="author">Matt</a>
+                              <div class="metadata">
+                                  <span class="date">Today at 5:42PM</span>
+                              </div>
+                              <div class="text">
+                                  How artistic!
+                              </div>
+                              <div class="actions">
+                                  <a class="reply">回复</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="comment">
+                          <a class="avatar">
+                              <img src="images/weChat.jpg">
+                          </a>
+                          <div class="content">
+                              <a class="author">Elliot Fu</a>
+                              <div class="metadata">
+                                  <span class="date">Yesterday at 12:30AM</span>
+                              </div>
+                              <div class="text">
+                                  <p>This has been very useful for my research. Thanks as well!</p>
+                              </div>
+                              <div class="actions">
+                                  <a class="reply">回复</a>
+                              </div>
+                          </div>
+                          <div class="comments">
+                              <div class="comment">
+                                  <a class="avatar">
+                                      <img src="images/weChat.jpg">
+                                  </a>
+                                  <div class="content">
+                                      <a class="author">Jenny Hess</a>
+                                      <div class="metadata">
+                                          <span class="date">Just now</span>
+                                      </div>
+                                      <div class="text">
+                                          Elliot you are always so right :)
+                                      </div>
+                                      <div class="actions">
+                                          <a class="reply">回复</a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="comment">
+                          <a class="avatar">
+                              <img src="images/weChat.jpg">
+                          </a>
+                          <div class="content">
+                              <a class="author">Joe Henderson</a>
+                              <div class="metadata">
+                                  <span class="date">5 days ago</span>
+                              </div>
+                              <div class="text">
+                                  Dude, this is awesome. Thanks so much
+                              </div>
+                              <div class="actions">
+                                  <a class="reply">回复</a>
+                              </div>
+                          </div>
+                      </div>
+<!--                      <form class="ui reply form">-->
+<!--                          <div class="field">-->
+<!--                              <textarea></textarea>-->
+<!--                          </div>-->
+<!--                          <div class="ui blue labeled submit icon button">-->
+<!--                              <i class="icon edit"></i> Add Reply-->
+<!--                          </div>-->
+<!--                      </form>-->
+                  </div>
+              </div>
+<!--            留言区域  -->
+              <div class="ui form">
+                  <div class="field">
+                      <textarea name="content" >请输入评论信息.....</textarea>
+                  </div>
+                  <div class="fields">
+                      <div class="field m-margin-bottom-small m-mobile-wide">
+                          <div class="ui left icon input ">
+                              <i class="icon user"></i>
+                              <input type="text" name="nickname" placeholder="用户名">
+                          </div>
+                      </div>
+                      <div class="field m-margin-bottom-small m-mobile-wide">
+                          <div class="ui left icon input">
+                              <i class="icon mail"></i>
+                              <input type="text" name="email" placeholder="邮箱">
+                          </div>
+                      </div>
+                      <div class="field m-margin-bottom-small m-mobile-wide">
+                          <button class="ui button teal m-mobile-wide"><i class="icon edit"></i>发布</button>
+                      </div>
+                  </div>
+              </div>
           </div>
         </div>
     </div>
