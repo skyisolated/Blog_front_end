@@ -35,7 +35,7 @@
         </a>
     </nav>
 <!--中间部分-->
-    <div class="m-padded-tb-large m-container-small animated fadeInDownBig">
+    <div id= "waypoint" class="m-padded-tb-large m-container-small">
         <div class="ui container">
           <div class="ui segment top attached">
               <div class="ui link list horizontal">
@@ -571,12 +571,12 @@ h5,h6{font-size:1em;}
           </div>
         </div>
     </div>
-    <div class="m-fixed m-bottom-right m-padded">
+    <div id="toolbar" class="m-fixed m-bottom-right m-padded" style="display: none">
      <div class="ui icon buttons vertical">
          <button id="con_btn" type="button" class="ui teal button">目录</button>
          <a href="#comments-container" class="ui teal button">留言</a>
-         <button class="ui button icon"><i class="icon weixin"></i></button>
-         <a href="#" class="ui button icon"><i class="icon chevron up"></i></a>
+         <button id="weixin_btn" class="ui button icon"><i class="icon weixin"></i></button>
+         <button id="toTop" class="ui button icon"><i class="icon chevron up"></i></button>
      </div>
     </div>
 
@@ -585,7 +585,9 @@ h5,h6{font-size:1em;}
 
     </ol>
 </div>
-
+<div id="ww_part" class="ui flowing popup transition hidden padded" style="width: 150px;">
+<!--    <img src="images/weChat.jpg" style="width: 120px;"  alt="" class="ui image rounded center aligned">-->
+</div>
 <!--网页底部-->
     <footer class="ui inverted segment vertical m-padded-tb-massive">
         <div class="ui container center aligned">
@@ -630,9 +632,21 @@ h5,h6{font-size:1em;}
 <!--js放在此处加载速度最快-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
 <script src="lib/prism/prism.js"></script>
 <script src="./lib/tocbot/tocbot.min.js"></script>
+<script src="./lib/qrcode/qrcode.min.js"></script>
+<script src="./lib/waypoints/jquery.waypoints.min.js"></script>
 <script>
+<!--    qrcode初始化-->
+var qrcode = new QRCode("ww_part", {
+    text: "http://www.baidu.com",
+    width: 120,
+    height: 120,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+});
 <!--    tocbot初始化-->
     tocbot.init({
         // Where to render the table of contents.
@@ -644,6 +658,21 @@ h5,h6{font-size:1em;}
         // For headings inside relative or absolute positioned containers within content.
         hasInnerContainers: true,
     });
+
+    <!--  滚动监听  -->
+var waypoint = new Waypoint({
+    element: document.getElementById('waypoint'),
+    handler: function(direction) {
+        if (direction == 'down') {
+            $('#toolbar').show(100);
+        } else {
+            $('#toolbar').hide(500);
+        }
+        console.log('Scrolled to waypoint!  ' + direction);
+    }
+})
+
+
     $("#mb_btn").click(function () {
         $(".m-item").toggleClass("m-mobile-hide");
     });
@@ -658,6 +687,16 @@ h5,h6{font-size:1em;}
         on: 'click',
         position: "left center"
     });
+    $("#weixin_btn").popup({
+        popup: $("#ww_part"),
+        on: "hover"
+    });
+    $("#toTop").click(function () {
+        //0表示顶部，500表示持续时间
+        $(window).scrollTo(0,500);
+    });
+
+
 </script>
 </body>
 </html>
